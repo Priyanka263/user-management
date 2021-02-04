@@ -1,0 +1,27 @@
+<h1 style="margin: 0">Add User</h1>
+<form>
+    <label for="firstname">First Name:</label><br />
+    <input type="text" name="firstname" id="firstname" placeholder=" First Name" [(ngModel)]="firstname" /><br />
+    <label for="lastname">Last Name:</label><br />
+    <input type="text" name="lastname" id="lastname "placeholder="Last Name" [(ngModel)]="lastname" /><br />
+    <label for="email">Email:</label><br />
+    <input type="email" name="email" id="email" placeholder="Email" [(ngModel)]="email" /><br />
+    <label for="mobile">Mobile:</label><br />
+    <input type="number" name="mobile"  id="mobile" placeholder="Mobile" [(ngModel)]="mobile" /><br />
+   
+    <!-- <input type="text" name="role" id="role"placeholder="Role" [(ngModel)]="role" /><br /> -->
+        <!-- <label>Role</label><br />
+        <select matNativeControl required>
+          <option value="admin">Admin</option>
+          <option value="user">Normal User</option>
+        </select><br /><br /> -->
+
+       <label for="Role">Role:</label><br />
+    <select (change)="selectChangeHandler($event)">
+        <option value="admin">Admin</option>
+        <option value="user">Normal User</option>
+    </select>
+    <p><span>You selected: </span><b>{{selectedRole}}</b></p>
+
+    <button type="button" (click)="User()">Add</button>
+</form>
